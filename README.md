@@ -40,8 +40,8 @@ serialPort.close();
 ```java
 new ASerialPort(path, baudrate, listener);
 ```
-| :---- param ----   | value  | example |
-|  ----  | ----  | ---- |
+|  param  | value  | example |
+|  :----  | ----  | ---- |
 | path  | serial port path; | "dev/ttyS0" |
 | baudrate  | See [termbits.h](https://sources.debian.org/src/android-platform-development/8.1.0%2Br23-1/ndk/platforms/android-9/arch-x86/include/asm/termbits.h/) |  B9600 value is 0000015, B115200 value is 0010002 |
 | listener | IComDataListener; | ... |
