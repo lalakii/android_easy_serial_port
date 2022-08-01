@@ -30,6 +30,9 @@ ASerialPort serialPort = new ASerialPort("/dev/ttyS0", 0010002, new IComDataList
         }
     }
 });
+
+//End 
+serialPort.close();
 ```
 
 3. Params:
