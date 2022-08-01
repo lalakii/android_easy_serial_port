@@ -17,7 +17,7 @@ Prerequisites
 ASerialPort serialPort = new ASerialPort("/dev/ttyS0", 0010002, new IComDataListener() {
     @Override
     public void OnReceive(byte[] data) {
-        //ByteArrayToHexStr using Guava
+        //ByteArrayToHexStr using Guava https://github.com/google/guava
         String hexStr = HashCode.fromBytes(data).toString();
         Log.d("serial_output", hexStr);
     }
