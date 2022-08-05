@@ -23,9 +23,9 @@ dependencies {
 import com.iamverylovely.ASerialPort.ASerialPort;
 
 // Open and receive Data:
-ASerialPort serialPort = new ASerialPort("/dev/ttyS0", 0010002, new ASerialPort.IComDataListener() {
+ASerialPort serialPort = new ASerialPort("/dev/ttyS0", 0010002, new ASerialPort.IDataCallback() {
     @Override
-    public void OnReceive(byte[] data) {
+    public void OnReceive(byte[] data, int len) {
         /**ByteArrayToHexStr
             using Guava https://github.com/google/guava
             */
@@ -66,7 +66,7 @@ new ASerialPort(path, baudrate, listener);
 |  :----  | ----  | :----: | ---- |
 | path  | serial port path; | String | "dev/ttyS0" |
 | baudrate  | See [termbits.h](https://sources.debian.org/src/android-platform-development/8.1.0%2Br23-1/ndk/platforms/android-9/arch-x86/include/asm/termbits.h/) | int | B9600 value is 0000015, B115200 value is 0010002 |
-| listener | IComDataListener; | callback | ... |
+| callback | IDataCallback; | callback | ... |
 
 4. ERROR CODE: 
 
