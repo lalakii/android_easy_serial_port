@@ -13,7 +13,7 @@ Prerequisites
 
 ```groovy
 dependencies {
-    implementation 'com.iamverylovely:ASerialPort.Android:0.2'
+    implementation 'com.iamverylovely:ASerialPort.Android:0.3' //release
 }
 ```
 
