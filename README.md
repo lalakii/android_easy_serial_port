@@ -73,7 +73,16 @@ new ASerialPort(path, baudrate, callback);
 | 0  | no err; |
 | 1 | open serial port err; |
 
+## Cautions
+```diff
+// Set the baudrate to 115200
 
+- new ASerialPort(..., 115200, ...);    × Wrong
+
++ new ASerialPort(..., 0010002, ...);    √ Right
+
+// The parameter here is the integer value corresponding to the baud rate.
+```
 ## About
 
 Generating electricity for love.
