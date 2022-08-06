@@ -75,13 +75,13 @@ new ASerialPort(path, baudrate, callback);
 
 ## Cautions
 ```diff
-// Set the baudrate to 115200
+// if you want to set the baudrate to 115200
 
 - new ASerialPort(..., 115200, ...);    × Wrong
 
 + new ASerialPort(..., 0010002, ...);    √ Right
 
-// The parameter here is the integer value corresponding to the baud rate.
+// The parameter here is the integer value corresponding to the baudrate.
 ```
 ## About
 
