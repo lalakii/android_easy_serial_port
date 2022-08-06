@@ -1,0 +1,47 @@
+apply plugin: 'com.android.application'
+
+android {
+    buildToolsVersion '33.0.0'
+    compileSdk 33
+    defaultConfig {
+        applicationId "com.iamverylovely.comm"
+        minSdkVersion 25
+        targetSdk 33
+        versionName "10.0.22.0424"
+        versionCode 10
+        ndk {
+            abiFilters 'arm64-v8a', 'armeabi-v7a','x86','x86_64'
+        }
+    }
+    buildTypes {
+        debug {
+            minifyEnabled false
+        }
+        release {
+            minifyEnabled false
+        }
+    }
+    compileOptions {
+        sourceCompatibility 11
+        targetCompatibility 11
+    }
+    lint {
+        abortOnError true
+    }
+    buildFeatures {
+        buildConfig = true
+    }
+}
+
+tasks.withType(JavaCompile) {
+    options.warnings = false
+    options.compilerArgs << "-Xlint:unchecked" << "-Xlint:deprecation"
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.4.1'
+    // https://mvnrepository.com/artifact/com.google.guava/guava
+    implementation 'com.google.guava:guava:31.1-android'
+    implementation 'com.iamverylovely:ASerialPort.Android:0.3' //release
+
+}
