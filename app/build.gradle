@@ -42,6 +42,6 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.4.1'
     // https://mvnrepository.com/artifact/com.google.guava/guava
     implementation 'com.google.guava:guava:31.1-android'
-    implementation 'com.iamverylovely:ASerialPort.Android:0.3' //release
+    implementation 'com.iamverylovely:ASerialPort.Android:0.4' //release
 
 }
