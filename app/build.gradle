@@ -1,0 +1,36 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace "com.iamverylovely.comm"
+    buildToolsVersion '34.0.0 rc4'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.iamverylovely.comm"
+        minSdk 14
+        targetSdk 33
+        versionCode 5
+        versionName "13"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            signingConfig signingConfigs.debug
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    buildToolsVersion '34.0.0 rc4'
+    ndkVersion "25.2.9519653"
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    // https://mvnrepository.com/artifact/com.google.guava/guava
+    implementation 'com.google.guava:guava:31.1-android'
+    implementation project(path: ':library')
+}

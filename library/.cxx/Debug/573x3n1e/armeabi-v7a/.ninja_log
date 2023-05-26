@@ -1,0 +1,6 @@
+# ninja log v5
+1	67	7067697918912067	CMakeFiles/comm1.dir/ASerialPort.c.o	15c6ff429ceef18c
+69	129	7067697919552181	E:/android_easy_serial_port/library/build/intermediates/cxx/Debug/573x3n1e/obj/armeabi-v7a/libcomm1.so	f300e87219e6c8cf
+1	8	0	clean	bab13ceabb154345
+0	7	0	clean	bab13ceabb154345
+0	8	0	clean	bab13ceabb154345

@@ -1,0 +1,1 @@
+E:\android_easy_serial_port\library\build\intermediates\cxx\RelWithDebInfo\423e5z2a\obj\arm64-v8a

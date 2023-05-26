@@ -1,0 +1,27 @@
+{
+  "buildFiles": [
+    "E:\\android_easy_serial_port\\library\\src\\main\\jni\\CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "C:\\Users\\sa\\AppData\\Local\\Android\\Sdk\\cmake\\3.22.1\\bin\\ninja.exe",
+      "-C",
+      "E:\\android_easy_serial_port\\library\\.cxx\\Debug\\573x3n1e\\x86_64",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "C:\\Users\\sa\\AppData\\Local\\Android\\Sdk\\cmake\\3.22.1\\bin\\ninja.exe",
+    "-C",
+    "E:\\android_easy_serial_port\\library\\.cxx\\Debug\\573x3n1e\\x86_64",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {
+    "comm1::@6890427a1f51a3e7e1df": {
+      "artifactName": "comm1",
+      "abi": "x86_64",
+      "output": "E:\\android_easy_serial_port\\library\\build\\intermediates\\cxx\\Debug\\573x3n1e\\obj\\x86_64\\libcomm1.so",
+      "runtimeFiles": []
+    }
+  }
+}

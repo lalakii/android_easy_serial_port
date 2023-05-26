@@ -1,0 +1,10 @@
+# ninja log v5
+0	69	7067697710015326	CMakeFiles/comm1.dir/ASerialPort.c.o	e55dfa5e01bcf832
+70	129	7067697710650434	E:/android_easy_serial_port/library/build/intermediates/cxx/RelWithDebInfo/423e5z2a/obj/x86/libcomm1.so	549179388c0bd7bf
+0	7	0	clean	bab13ceabb154345
+0	7	0	clean	bab13ceabb154345
+2	69	7067698603787512	CMakeFiles/comm1.dir/ASerialPort.c.o	e55dfa5e01bcf832
+69	129	7067698604417633	E:/android_easy_serial_port/library/build/intermediates/cxx/RelWithDebInfo/423e5z2a/obj/x86/libcomm1.so	549179388c0bd7bf
+0	7	0	clean	bab13ceabb154345
+2	71	7067699005233115	CMakeFiles/comm1.dir/ASerialPort.c.o	e55dfa5e01bcf832
+71	131	7067699005853224	E:/android_easy_serial_port/library/build/intermediates/cxx/RelWithDebInfo/423e5z2a/obj/x86/libcomm1.so	549179388c0bd7bf

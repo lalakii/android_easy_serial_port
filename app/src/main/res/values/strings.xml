@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">EzSerialPortDemo</string>
+    <string name="tips">Tips:\nadb shell\nsu\nsetenforce 0\nchmod 0777 /dev/ttyS*</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    <string name="send">Send</string>
+</resources>

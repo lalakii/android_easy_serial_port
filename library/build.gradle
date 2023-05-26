@@ -1,0 +1,33 @@
+plugins {
+    id 'com.android.library'
+}
+
+android {
+    namespace 'com.iamverylovely'
+    compileSdk 33
+
+    defaultConfig {
+        minSdk 13
+        targetSdk 33
+    }
+
+    buildTypes {
+        release {
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    externalNativeBuild{
+        cmake{
+            path "src/main/jni/CMakeLists.txt"
+            version "3.22.1"
+        }
+    }
+    ndkVersion "25.2.9519653"
+    project.archivesBaseName = "ASerialPort.Android"
+}
+
+dependencies {
+}

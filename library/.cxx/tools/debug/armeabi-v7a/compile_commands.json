@@ -1,0 +1,7 @@
+[
+{
+  "directory": "E:/android_easy_serial_port/library/.cxx/Debug/573x3n1e/armeabi-v7a",
+  "command": "C:\\Users\\sa\\AppData\\Local\\Android\\Sdk\\ndk\\25.2.9519653\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang.exe --target=armv7-none-linux-androideabi19 --sysroot=C:/Users/sa/AppData/Local/Android/Sdk/ndk/25.2.9519653/toolchains/llvm/prebuilt/windows-x86_64/sysroot -Dcomm1_EXPORTS -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -fno-limit-debug-info  -fPIC -o CMakeFiles\\comm1.dir\\ASerialPort.c.o -c E:\\android_easy_serial_port\\library\\src\\main\\jni\\ASerialPort.c",
+  "file": "E:\\android_easy_serial_port\\library\\src\\main\\jni\\ASerialPort.c"
+}
+]
