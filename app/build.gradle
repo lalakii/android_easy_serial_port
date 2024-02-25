@@ -1,0 +1,40 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace "cn.lalaki.comm"
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "cn.lalaki.comm"
+        minSdk 16
+        targetSdk 34
+        versionCode 10
+        versionName "16"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            signingConfig signingConfigs.debug
+            jniDebuggable false
+            debuggable false
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.guava:guava:33.0.0-android'
+    //implementation 'cn.lalaki:SerialPort.Android:1.0'
+    implementation project(path: ':library')
+}
+
+
+tasks.configureEach {
+    if (it.name.toLowerCase().contains("aarmetadata")) enabled = false
+}
