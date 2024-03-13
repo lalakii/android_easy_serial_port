@@ -63,7 +63,7 @@ Android serial port read/write library.
    
    | param           | value  |   type    | example |
    |:----------------| ----  |:---------:| ---- |
-   | path            | Serial port path |  String   | "dev/ttyS0" |
+   | path            | Serial port path |  String   | "/dev/ttyS0" |
    | speed is baud rate | See [termbits.h](https://github.com/torvalds/linux/blob/master/include/uapi/asm-generic/termbits.h) |  int  | B9600 value is 0000015, B115200 value is 0010002 |
    | callback        | DataCallback | interface | ... |
 
