@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">安卓串口Demo</string>
+    <string name="tips">如果串口没有数据，或者输出 “0e”，尝试:\nadb shell\nsu\nsetenforce 0\nchmod 0766 /dev/ttyS*</string>
+    <string name="open">打开</string>
+    <string name="close">关闭</string>
+    <string name="send">发送</string>
+    <string name="clear">清除屏幕</string>
+    <string name="label">\t端口：</string>
+    <string name="links">https://github.com/lalakii/android_easy_serial_port</string>
+</resources>

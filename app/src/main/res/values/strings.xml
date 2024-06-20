@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Android_SerialPort_Demo</string>
+    <string name="tips">If there is no output, or if “0e” is output, try:\nadb shell\nsu\nsetenforce 0\nchmod 0766 /dev/ttyS*</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    <string name="send">Send</string>
+    <string name="clear">Clear OUTPUT</string>
+    <string name="label">\tPort:</string>
+    <string name="links">https://github.com/lalakii/android_easy_serial_port</string>
+</resources>
