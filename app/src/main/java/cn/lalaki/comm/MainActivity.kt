@@ -27,8 +27,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     override fun onClick(p0: View?) {
         when (p0?.id) {
             R.id.open -> {
-                val port = binding.serialPorts.selectedItem.toString().trim()
-                if (port.isNotEmpty()) {
+                val port = binding.serialPorts.selectedItem?.toString()?.trim()
+                if (port?.isNotEmpty() == true) {
                     //BaudRate: B115200, see BaudRate value: https://github.com/torvalds/linux/blob/master/include/uapi/asm-generic/termbits.h
                     val b115200 = "0010002".toInt(8)
                     serialPort = SerialPort(port, b115200, object : SerialPort.DataCallback {

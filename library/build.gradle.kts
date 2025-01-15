@@ -1,15 +1,17 @@
 import com.android.build.gradle.internal.tasks.AarMetadataTask
+import cn.lalaki.pub.BaseCentralPortalPlusExtension.PublishingType
 
 plugins {
     id("com.android.library")
     id("org.jetbrains.kotlin.android")
+    id("cn.lalaki.central") version "1.2.6"
     `maven-publish`
     signing
 }
 android {
     namespace = "cn.lalaki"
-    compileSdk = 34
-    version = "1.4"
+    compileSdk = 35
+    version = "1.5"
 
     defaultConfig {
         minSdk = 21
@@ -29,11 +31,11 @@ android {
     externalNativeBuild {
         cmake {
             path = file("src/main/jni/CMakeLists.txt")
-            version = "3.22.1"
+            version = "3.31.1"
         }
     }
     base.archivesName = "SerialPort.Android"
-    ndkVersion = "27.0.11718014 rc1"
+    ndkVersion = "28.0.12674087 rc2"
 }
 
 tasks.withType<AarMetadataTask> {
@@ -44,20 +46,16 @@ tasks.configureEach {
     if (name.contains("checkDebugAndroidTestAarMetadata"))
         enabled = false
 }
+val localMavenRepo = uri("D:\\repo\\")
+centralPortalPlus {
+    url = localMavenRepo
+    tokenXml = uri("D:\\user_token.xml")
+    publishingType = PublishingType.USER_MANAGED
+}
 publishing {
     repositories {
         maven {
-            name = "localPluginRepository"
-            val publishToLocal = false
-            if (publishToLocal) {
-                url = uri("D:\\repo\\")
-            } else {
-                url = uri("https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/")
-                credentials {
-                    username = "iamverycute"
-                    password = System.getenv("my_final_password")
-                }
-            }
+            url = localMavenRepo
         }
     }
     publications {

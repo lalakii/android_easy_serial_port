@@ -3,7 +3,7 @@
 #include <pthread.h>
 #include <unistd.h>
 
-#define MAX_THREAD_LIMIT 32
+#define MAX_THREAD_LIMIT 64
 struct {
     pthread_t tid;
     jobject clazz;
@@ -30,7 +30,7 @@ void *comm_read() {
     if (clazz != NULL) {
         int fd;
         while ((fd = (*env)->GetIntField(env, clazz, mFD)) != -1) {
-            int size = 1024;
+            int size = 512;
             jbyte data[size];
             int len = read(fd, data, size);
             if (len > 0) {
@@ -50,7 +50,9 @@ void *comm_read() {
                     threads[i].clazz = clazz = NULL;
                 } else {
                     isFree = 0;
-                    if (clazz == NULL) break;
+                    if (clazz == NULL) {
+                        break;
+                    }
                 }
             }
         }
@@ -65,7 +67,11 @@ void *comm_read() {
 }
 
 JNIEXPORT void JNICALL
-Java_cn_lalaki_SerialPort_open(JNIEnv *env, jclass clazz, int fd, int speed) {
+Java_cn_lalaki_SerialPort_open(
+        JNIEnv *env,
+        jclass clazz,
+        int fd,
+        int speed) {
     tcflush(fd, TCIOFLUSH);
     struct termios cfg;
     tcgetattr(fd, &cfg);
@@ -85,7 +91,11 @@ Java_cn_lalaki_SerialPort_open(JNIEnv *env, jclass clazz, int fd, int speed) {
 }
 
 JNIEXPORT void JNICALL
-Java_cn_lalaki_SerialPort_write(JNIEnv *env, __unused jclass _, int fd, jbyteArray bytes) {
+Java_cn_lalaki_SerialPort_write(
+        JNIEnv *env,
+        __unused jclass _,
+        int fd,
+        jbyteArray bytes) {
     jbyte *data = (*env)->GetByteArrayElements(env, bytes, NULL);
     if (data != NULL) {
         write(fd, data, (*env)->GetArrayLength(env, bytes));
@@ -94,6 +104,9 @@ Java_cn_lalaki_SerialPort_write(JNIEnv *env, __unused jclass _, int fd, jbyteArr
 }
 
 JNIEXPORT void JNICALL
-Java_cn_lalaki_SerialPort_close(__unused JNIEnv *_, __unused jclass __, int fd) {
+Java_cn_lalaki_SerialPort_close(
+        __unused JNIEnv *e,
+        __unused jclass _,
+        int fd) {
     close(fd);
 }
